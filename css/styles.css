@@ -3,7 +3,7 @@
 header grey: #2d3945
 input lightgrey: e8e9ea
 button teal: 6acca6
-
+outline blue: 507cc4
 */
 
 /*CSS-CHECK*/
@@ -79,7 +79,6 @@ legend {
   font-weight: 700;
   padding-top: .5em;
   padding-bottom: .5em;
-  /*margin-left:*/
 }
 
 label, p {
@@ -167,6 +166,10 @@ input:focus::-webkit-input-placeholder {
   color:transparent;
 }
 
+input, textarea:focus {
+  outline-color: #507cc4;
+}
+
 .select-menu {
   color: #bcc6d6;
   font-family: merriweather;
@@ -183,3 +186,10 @@ input:focus::-webkit-input-placeholder {
 button:focus {
   background: #419172;
 }
+
+/*VALIDATIONS*/
+
+form {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
