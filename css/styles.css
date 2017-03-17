@@ -35,6 +35,10 @@ fieldset {
   border: none;
 }
 
+body {
+  background-color: #f7f7ef;
+}
+
 /*TOP AND HEADER CSS*/
 
 header {
@@ -160,14 +164,25 @@ button {
   font-style: italic;
 }
 
-/*INPUT STYLES/HOVER STATES*/
+/*INPUT STYLES/HOVER/FOCUS STATES*/
 
 input:focus::-webkit-input-placeholder {
   color:transparent;
 }
 
+input:hover {
+  transition: all .5s ease-in-out;
+  background: white;
+}
+
 input, textarea:focus {
   outline-color: #507cc4;
+  background: white;
+}
+
+.personal-info input:focus {
+  background: white;
+  outline: 2px solid rgb(80, 124, 196);
 }
 
 .select-menu {
@@ -180,16 +195,16 @@ input, textarea:focus {
   transition: all .6s ease-out;
 }
 
-/*ADD INPUT BORDER COLOR CHANGE*/
 
 /*BUTTON RESPONSE*/
+
 button:focus {
   background: #419172;
 }
 
 /*VALIDATIONS*/
 
-form {
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
+input[type="email"]:valid {
+  outline: 3px solid lightgreen;
+  background: white;
+}
